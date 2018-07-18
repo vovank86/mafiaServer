@@ -4,6 +4,7 @@
   "description": "server for mafia game",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "test"
   },
   "repository": {
