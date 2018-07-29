@@ -2,9 +2,10 @@
   "name": "mafiaserver",
   "version": "1.0.0",
   "description": "server for mafia game",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./src/index.js",
+    "develop": "nodemon --watch ./src",
     "test": "test"
   },
   "repository": {
@@ -26,5 +27,8 @@
     "express": "^4.16.3",
     "express-ws": "^4.0.0",
     "mongoose": "^5.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
   }
 }
