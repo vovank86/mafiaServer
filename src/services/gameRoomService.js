@@ -1,7 +1,6 @@
-const playerModel = require('../models/player');
 const gameRoomModel = require('../models/gameRoom');
 
-class gameRoomService {
+class GameRoomService {
 
    async create(name, maxPlayers){
         if(!name) throw new Error('name can not be empty');
@@ -17,8 +16,12 @@ class gameRoomService {
 
        return await gameRoomModel.findByIdAndDelete(id);
     }
+
+    async getRoomName(id){
+       return await gameRoomModel.findById(id, 'name');
+    }
 }
 
-const service = new gameRoomService();
+const service = new GameRoomService();
 
 module.exports = service;
